@@ -76,8 +76,11 @@ blockquote {
 }
 
 .header {
-    background-color: #1F8DD6;
+    background-color: #393185;
     color: #eee;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
 }
 
 .header a {
