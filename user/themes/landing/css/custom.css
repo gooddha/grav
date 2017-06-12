@@ -9,6 +9,7 @@ body {
     font-size: 1rem;
     line-height: 1.7;
     color: #606d6e;
+    font-family: 'Arsenal', sans-serif;
 }
 
 h1,
@@ -72,7 +73,7 @@ blockquote {
 
 /* Content Styling */
 .header .padding {
-    padding: 1rem 0;
+    padding: 0;
 }
 
 .header {
@@ -175,4 +176,41 @@ blockquote {
 
 .main-nav .has-children .has-children > a:after {
     content: '\f105';
+}
+
+.phone,
+.social a {
+    margin-right: 30px;
+    font-size: 2em;
+    vertical-align: middle;
+    transition: 0.5s;
+}
+
+.phone:hover,
+.phone a:hover,
+.social a:hover {
+    color: #888;
+    transition: 0.5s;
+}
+
+.pure-form {
+    font-size: 1.5em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-container {
+    padding: 0;
+}
+
+.pure-form button {
+    width: 100%;
+}
+
+.content-head {
+    font-size: 3em;
+}
+
+.call-form {
+    font-size: 2em;
 }

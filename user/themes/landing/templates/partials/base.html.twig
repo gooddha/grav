@@ -18,6 +18,7 @@
         {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/pure-min.css', 100) %}
         {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css', 100) %}
         {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 99) %}
+        {% do assets.addCss('https://fonts.googleapis.com/css?family=Arsenal:400,700&amp;subset=cyrillic', 99) %}
         {% do assets.addCss('theme://css/marketing.css', 98) %}
         {% do assets.addCss('theme://css/custom.css', 98) %}
     {% endblock %}
@@ -36,20 +37,37 @@
     <div class="header">
         <div class="wrapper padding">
             <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
-                <i class="fa fa-rebel"></i>
+                <img width=75 src="user/themes/landing/images/small_logo.png"></img>
                 {{ config.site.title }}
             </a>
-            {% block header_navigation %}
+            <!-- {% block header_navigation %}
             <nav class="main-nav">
+
                 {% include 'partials/navigation.html.twig' %}
             </nav>
-            {% endblock %}
+            {% endblock %} -->
+
+            <div class="contacts right">
+                <div class="phone left">
+                    <i class="fa fa-phone-square" aria-hidden="true"></i>
+                    <a href="tel:+7(978)058-31-22">+7(978)058-31-22</a>
+                </div>
+                <div class="social right">
+                    <a href="https://vk.com/monopoly.crimea">
+                        <i class="fa fa-vk" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 {% endblock %}
 
-<div class="splash-container">
-    <div class="splash">
+<div class="pure-g splash-container">
+    <div class="pure-u-1 splash">
         <!-- <h1 class="splash-head">Big Bold Text</h1>
         <p class="splash-subhead">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -99,7 +117,7 @@
                     Plays Nice
                 </h3>
                 <p>
-                    Отправляйтесь в увлекательное путешествие по полуострову, познакомьтесь с неповторимым и разнообразным по культуре и традициям Крымом!
+                    Всё это у вас дома! Получайте море впечатлений и эмоций, зарабатывайте миллионы, становитесь настоящим «Крымским Монополистом»! А также любуйтесь самыми красивыми местами, несущими за собой целую историю!
                 </p>
             </div>
         </div>
@@ -120,61 +138,67 @@
     </div>
 
     <div class="content">
-        <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
 
         <div class="pure-g">
-            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
-                <form class="pure-form pure-form-stacked" action="email.php">
-                    <fieldset>
 
-                        <label for="name">Your Name</label>
-                        <input id="name" type="text" placeholder="Your Name">
-
-
-                        <label for="email">Your Email</label>
-                        <input id="email" type="email" placeholder="Your Email">
-
-                        <label for="password">Your Password</label>
-                        <input id="password" type="password" placeholder="Your Password">
-
-                        <button type="submit" class="pure-button">Sign Up</button>
-                    </fieldset>
-                </form>
-            </div>
-
-            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+            <div class="l-box-lrg pure-u-1">
                 <h4>Contact Us</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
+                    «Монополия Крым» поможет разнообразить Вам и Вашей компании свой досуг и принесет изюминку в обычные посиделки! Станет отличным и оригинальным подарком из Крыма для Ваших близких!
                 </p>
+            </div>
+            <div class="l-box pure-u-1">
+                <h2 class="content-head is-center">Спешите стать её владельцем.</h2>
+                <h4 class="call-form is-center">Оформите заявку, заполнив форму:</h4>
+            </div>
+            <div class="l-box-lrg pure-u-1 form-container">
+                <form class="pure-form pure-form-aligned" action="email.php">
+                    <fieldset>
 
-                <h4>More Information</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                        <label for="name">Ваше имя</label>
+                        <input id="name" type="text" placeholder="Ваше имя">
+
+
+                        <label for="email">Ваш телефон</label>
+                        <input id="email" type="number" placeholder="Ваш телефон">
+
+                        <button type="submit" class="pure-button">Заказать</button>
+                    </fieldset>
+                </form>
             </div>
         </div>
 
     </div>
-
+<!--
 {% block body %}
     <section id="body">
         <div class="wrapper padding">
         {% block content %}{% endblock %}
         </div>
     </section>
-{% endblock %}
+{% endblock %} -->
 
 {% block footer %}
     <div class="footer text-center">
         <div class="wrapper padding">
-            <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
+            <div class="contacts">
+                <div class="phone">
+                    <i class="fa fa-phone-square" aria-hidden="true"></i>
+                    <a href="tel:+7(978)058-31-22">+7(978)058-31-22</a>
+                </div>
+                <div class="social">
+                    <a href="https://vk.com/monopoly.crimea">
+                        <i class="fa fa-vk" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://instagram.com">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <p>Монополия Крым <i class="fa fa-copyright"></i> 2017.</p>
         </div>
     </div>
+
 {% endblock %}
 
 {% block bottom %}
