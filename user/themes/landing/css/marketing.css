@@ -134,30 +134,140 @@ a.pure-button-primary {
  */
 
 .splash-container {
+    display: block;
     background: #1f8dd6;
     z-index: -1;
-
+    background-image: url(../images/head_background.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 95vh;
+    top: 3.4em;
     left: 0;
     position: fixed !important;
 }
 
 .splash {
-    background-image: url(../images/head.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    overflow: hidden;
+    /*background-image: url(../images/strip.svg);*/
+    /*background: linear-gradient(to top, hsl(0, 0%, 100%), hsl(246, 46%, 36%));*/
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 100%;*/
+
     /* absolute center .splash within .splash-container */
-    width: 100vw;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     /*margin: auto;*/
     position: absolute;
     /*top: 100px; left: 0; bottom: 0; right: 0;*/
-    text-align: center;
+    /*text-align: center;*/
     text-transform: uppercase;
+    animation: colorchange 5s infinite ease-in-out;
+    -webkit-animation: colorchange 5s infinite ease-in-out;
+    transition: 5s;
+
+    background: linear-gradient(36deg, #00cc97, #8351c8);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
+}
+
+@keyframes colorchange {
+    0% {background: linear-gradient(to top, hsl(0, 0%, 100%), hsl(0, 46%, 36%))}
+    100%{background: linear-gradient(to top, hsl(0, 0%, 100%), hsl(180, 46%, 36%))}
+}
+
+
+@-webkit-keyframes colorchange {
+    0% {background: linear-gradient(to top, hsl(0, 0%, 100%), hsl(0, 46%, 36%))}
+    100%{background: linear-gradient(to top, hsl(0, 0%, 100%), hsl(180, 46%, 36%))}
+}
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 87%}
+    50%{background-position:100% 14%}
+    100%{background-position:0% 87%}
+}
+
+
+.strip {
+    position: absolute;
+    top: 0;
+    height: 30%;
+}
+
+.made_in_crimea {
+    position: absolute;
+    right: -40px;
+    width: 40%;
+}
+
+.logo_wrapper {
+    position: absolute;
+    max-width: 700px;
+    width: 80%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_container {
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    /*outline: 1px solid black;*/
+}
+
+.sights {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    /*box-shadow: 0 20px 10px black;*/
+    max-width: 100%;
+}
+
+.big_logo {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*box-shadow: 0 20px 10px black;*/
+    max-width: 100%;
+}
+
+.dice {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    /*box-shadow: 0 20px 10px black;*/
+    max-width: 50%;
+}
+
+.age_players {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    width: 10vw;
 }
 
 /* This is the main heading that appears on the blue section */
@@ -170,6 +280,25 @@ a.pure-button-primary {
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
+}
+
+.splash_button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.splash_button a{
+    font-size: 200%;
+    transition: 0.2s;
+}
+
+.splash_button:hover a{
+    font-size: 300%;
+    background-color: #23dc80;
+    color: #ffffff;
+    transition: 0.2s;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -186,7 +315,7 @@ a.pure-button-primary {
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 80vh;
+    top: 100vh;
     width: 100%;
     min-height: 12%;
     z-index: 2;
@@ -204,7 +333,7 @@ a.pure-button-primary {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0em;
-    margin: 2em 0 1em;
+    /*margin: 2em 0 1em;*/
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -249,7 +378,7 @@ a.pure-button-primary {
     .content-wrapper {
         /* These styles are required for the "scroll-over" effect */
         position: absolute;
-        top: 80%;
+        top: 100vh;
         width: 100%;
         min-height: 12%;
         z-index: 2;
@@ -268,7 +397,8 @@ a.pure-button-primary {
 
     /* We increase the height of the splash-container */
     .splash-container {
-        height: 80%;
+        height: 95vh;
+        top: 3em;
     }
 
     /* We decrease the width of the .splash, since we have more width
