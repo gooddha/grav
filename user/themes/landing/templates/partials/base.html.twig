@@ -39,13 +39,7 @@
             <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
                 <img width=75 src="user/themes/landing/images/small_logo.png"></img>
                 {{ config.site.title }}
-            </a>
-            <!-- {% block header_navigation %}
-            <nav class="main-nav">
-
-                {% include 'partials/navigation.html.twig' %}
-            </nav>
-            {% endblock %} -->
+            </a>            
 
             <div class="contacts right">
                 <div class="phone left">
@@ -66,66 +60,7 @@
     </div>
 {% endblock %}
 
-<div class="pure-g splash-container">
-    <div class="pure-u-1 splash">
-        <img class="strip" src="user/themes/landing/images/strip.svg">
-        <img class="made_in_crimea" src="user/themes/landing/images/made_in_crimea.png">
-        <div class="logo_wrapper">
-            <div class="logo_container">
-                <img class="sights" src="user/themes/landing/images/sights.png">
-                <img class="big_logo" src="user/themes/landing/images/big_logo.svg">
-                <img class="dice" src="user/themes/landing/images/dice.png">
-            </div>
-        </div>
-        <img class="age_players" src="user/themes/landing/images/age-players.svg">
-        <p class="splash_button">
-            <a href="#" class="pure-button pure-button-primary">Заказать</a>
-        </p>
-    </div>
-</div>
-
-<div class="content-wrapper">
-    <div class="content">
-        <h2 class="content-head is-center">Представляем Вам нашу версию давно известной многим классической игры «Монополия»</h2>
-
-        <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-
-                <h3 class="content-subhead">
-                    <i class="fa fa-building-o"></i>
-                </h3>
-                <p>
-                    «Монополия Крым» позволит Вам познакомиться с основными городами — жемчужинами Крыма и стать их владельцем!
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-map-signs"></i>
-                </h3>
-                <p>
-                    Отправляйтесь в увлекательное путешествие по полуострову, познакомьтесь с неповторимым и разнообразным по культуре и традициям Крымом!
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-image"></i>
-                </h3>
-                <p>
-                    Здесь и памятники военных событий, и разнообразная архитектура, и красивые пейзажи, и, конечно же, море и горы!
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-home"></i>
-                </h3>
-                <p>
-                    Всё это у вас дома! Получайте море впечатлений и эмоций, зарабатывайте миллионы, становитесь настоящим «Крымским Монополистом»!
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="ribbon l-box-lrg pure-g">
+    <!-- <div class="ribbon l-box-lrg pure-g">
         <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
             <img width="300" alt="File Icons" class="pure-img-responsive" src="user/themes/landing/images/game-shadow.png">
         </div>
@@ -137,70 +72,32 @@
                 Красочное оформление и индивидуальный дизайн нашей игры — это лишь капля в море, по сравнению с теми эмоциями, которые Вы испытаете за игрой!
             </p>
         </div>
-    </div>
+    </div> -->
 
-    <div class="content">
-
-        <div class="pure-g">
-
-            <div class="l-box-lrg pure-u-1">
-                <h4>Contact Us</h4>
-                <p>
-                    «Монополия Крым» поможет разнообразить Вам и Вашей компании свой досуг и принесет изюминку в обычные посиделки! Станет отличным и оригинальным подарком из Крыма для Ваших близких!
-                </p>
-            </div>
-            <div class="l-box pure-u-1">
-                <h2 class="content-head is-center">Спешите стать её владельцем.</h2>
-                <h4 class="call-form is-center">Оформите заявку, заполнив форму:</h4>
-            </div>
-            <div class="l-box-lrg pure-u-1 form-container">
-                <form class="pure-form pure-form-aligned" action="email.php">
-                    <fieldset>
-
-                        <label for="name">Ваше имя</label>
-                        <input id="name" type="text" placeholder="Ваше имя">
+<div class="pure-g splash-container">
+  <div class="pure-u-1 splash">
+      <img class="strip" src="user/themes/landing/images/strip.svg">
+      <img class="made_in_crimea" src="user/themes/landing/images/made_in_crimea.png">
+      <div class="logo_wrapper">
+          <div class="logo_container">
+              <img class="sights" src="user/themes/landing/images/sights.png">
+              <img class="big_logo" src="user/themes/landing/images/big_logo.svg">
+              <img class="dice" src="user/themes/landing/images/dice.png">
+          </div>
+      </div>
+      <img class="age_players" src="user/themes/landing/images/age-players.svg">
+      <p class="splash_button">
+          <a href="#" class="pure-button pure-button-primary">Заказать</a>
+      </p>
+  </div>
+</div>
 
 
-                        <label for="email">Ваш телефон</label>
-                        <input id="email" type="number" placeholder="Ваш телефон">
 
-                        <button type="submit" class="pure-button">Заказать</button>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-
-    </div>
-<!--
 {% block body %}
-    <section id="body">
-        <div class="wrapper padding">
-        {% block content %}{% endblock %}
-        </div>
-    </section>
-{% endblock %} -->
-
-{% block footer %}
-    <div class="footer text-center">
-        <div class="wrapper padding">
-            <div class="contacts">
-                <div class="phone">
-                    <i class="fa fa-phone-square" aria-hidden="true"></i>
-                    <a href="tel:+7(978)058-31-22">+7(978)058-31-22</a>
-                </div>
-                <div class="social">
-                    <a href="https://vk.com/monopoly.crimea">
-                        <i class="fa fa-vk" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://instagram.com">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-            <p>Монополия Крым <i class="fa fa-copyright"></i> 2017.</p>
-        </div>
+    <div class="content-wrapper">
+      {% block content %}{% endblock %}
     </div>
-
 {% endblock %}
 
 {% block bottom %}
