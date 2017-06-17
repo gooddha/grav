@@ -8,6 +8,8 @@ content:
         dir: asc
         custom:
             - _content
+            - _slider
             - _form
+            - _complectation
             - _footer            
 ---
