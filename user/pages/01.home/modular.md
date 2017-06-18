@@ -9,7 +9,8 @@ content:
         custom:
             - _content
             - _slider
-            - _form
+            - _promotext
             - _complectation
+            - _form            
             - _footer            
 ---

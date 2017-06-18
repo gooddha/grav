@@ -31,9 +31,29 @@
     {% endif %}
 {% endblock %}
 
+{% block splash %}
+  <div class="pure-g splash-container">
+    <div class="pure-u-1 splash">
+        <img class="strip" src="user/themes/landing/images/strip.svg" alt="Лента флаг Крыма">
+        <img class="made_in_crimea" src="user/themes/landing/images/made_in_crimea.png" alt="Сделано в Крыму">
+        <div class="logo_wrapper">
+            <div class="logo_container">
+                <img class="sights" src="user/themes/landing/images/sights.png">
+                <img class="big_logo" src="user/themes/landing/images/big_logo.svg" alt="Монополия Крым">
+                <img class="dice" src="user/themes/landing/images/dice.png">
+            </div>
+        </div>
+        <img class="age_players" src="user/themes/landing/images/age-players.svg" alt="Возраст: от 8 лет, количество игроков: 2-6">
+        <p class="splash_button">
+            <a href="#" class="pure-button pure-button-primary">Заказать</a>
+        </p>
+    </div>
+  </div>
+{% endblock %}
+
 {% block content %}
     {{ page.content }}
-    {% for module in page.collection() %}        
+    {% for module in page.collection() %}
         {{ module.content }}
     {% endfor %}
 {% endblock %}

@@ -12,7 +12,7 @@ body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
-    font-family: 'Arsenal', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 h1,
@@ -23,7 +23,7 @@ h5,
 h6,
 label {
     color: #34495e;
-    font-family: 'Arsenal', sans-serif;
+    font-family: 'PT sans', sans-serif;
 }
 
 .pure-img-responsive {
@@ -124,7 +124,8 @@ a.pure-button-primary {
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    /*color: #AECFE5;*/
+    box-shadow: 0 0 5px black;
 }
 
 
@@ -147,7 +148,7 @@ a.pure-button-primary {
     top: 3.4em;
     left: 0;
     position: fixed !important;
-    /*animation: colorchange 30s infinite linear;*/
+    animation: colorchange 30s infinite linear;
 }
 
 .splash {
@@ -281,6 +282,7 @@ a.pure-button-primary {
     color: #ffffff;
     transition: 0.1s;
     box-shadow: 0 15px 40px #555555;
+    opacity: 0.9;
 }
 
 .splash_button:hover a{
@@ -289,6 +291,7 @@ a.pure-button-primary {
     color: #ffffff;
     transition: 0.1s;
     box-shadow: 0 15px 40px #555555;
+    opacity: 1;
 }
 
 .splash_button:active a{
@@ -335,7 +338,9 @@ a.pure-button-primary {
 }
 
 .content p {
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "PT Sans", sans-serif;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
@@ -353,13 +358,93 @@ a.pure-button-primary {
 }
     .content-subhead i {
         margin-right: 0px;
+        transition: 0.3s;
     }
+
+    .content-subhead i:hover {
+        transform: scale(1.3);
+        transition: 0.3s;
+    }
+
+.promo {
+  background: url(../images/kry.jpg);
+  background-size: cover;
+  padding: 30px;
+
+}
+
+.promo h3 {
+  font-size: 2em;
+}
+
+
+.complectation_wrapper {
+  background-color: #2b2b2b;
+  background: url(../images/pattern.png);
+  padding: 32px;
+  box-shadow: inset 0 0 20px black;
+}
+
+.complectation_items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.complectation_wrapper h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  color: #ffffff;
+}
+
+.complectation_item {
+  /*width: 100px;*/
+  min-height: 100px;
+}
+
+
+.complectation_item .image {
+  /*border-radius: 50%;*/
+  /*overflow: hidden;*/
+}
+
+
+
+.complectation_item .image  img{
+  border: 1px solid #ffffff;
+  width: 50%;
+  display: inherit;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 3px 30px black;
+  box-shadow: 0 3px 30px black;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.complectation_item .image img:hover {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+
+}
+
+.complectation_item .description p {
+  color: #ffffff;
+  text-align: center;
+}
+
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
     background: #2d3e50;
     color: #aaa;
 }
+
+
 
 /* This is the class used for the footer */
 .footer {

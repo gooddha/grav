@@ -5,11 +5,42 @@
     box-sizing: border-box;
 }
 
+/* Шрифты */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-regular.woff2") format("woff2"), url("../fonts/opensans-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
 body {
     font-size: 1rem;
     line-height: 1.7;
     color: #606d6e;
-    font-family: 'Arsenal', sans-serif;
+    font-family: "PT Sans", sans-serif;
+    /*font-family: 'Arsenal', sans-serif;*/
 }
 
 h1,
@@ -26,9 +57,9 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+/*a:hover {
     color: #175E91;
-}
+}*/
 
 pre {
     background: #F0F0F0;
@@ -189,8 +220,10 @@ blockquote {
 .phone:hover,
 .phone a:hover,
 .social a:hover {
+    /*filter: drop-shadow(0 0 1px #6fdf6c);*/
+    text-shadow: 0 0 10px #000000;
     color: #888;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .pure-form {

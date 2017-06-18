@@ -37,7 +37,7 @@
     <div class="header">
         <div class="wrapper padding">
             <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
-                <img width=75 src="user/themes/landing/images/small_logo.png"></img>
+                <img width=75 src="user/themes/landing/images/small_logo.png" alt="Лого"></img>
                 {{ config.site.title }}
             </a>
 
@@ -60,25 +60,8 @@
     </div>
 {% endblock %}
 
-
-<div class="pure-g splash-container">
-  <div class="pure-u-1 splash">
-      <img class="strip" src="user/themes/landing/images/strip.svg">
-      <img class="made_in_crimea" src="user/themes/landing/images/made_in_crimea.png">
-      <div class="logo_wrapper">
-          <div class="logo_container">
-              <img class="sights" src="user/themes/landing/images/sights.png">
-              <img class="big_logo" src="user/themes/landing/images/big_logo.svg">
-              <img class="dice" src="user/themes/landing/images/dice.png">
-          </div>
-      </div>
-      <img class="age_players" src="user/themes/landing/images/age-players.svg">
-      <p class="splash_button">
-          <a href="#" class="pure-button pure-button-primary">Заказать</a>
-      </p>
-  </div>
-</div>
-
+{% block splash %}
+{% endblock %}
 
 
 {% block body %}
@@ -86,6 +69,7 @@
       {% block content %}{% endblock %}
     </div>
 {% endblock %}
+
 
 {% block bottom %}
     {{ assets.js('bottom') }}
