@@ -61,8 +61,8 @@ label {
 }
 
 .pure-form input[type] {
-    border: 2px solid #ddd;
-    box-shadow: 0 0 5px black;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 0 5px #818181;
     font-size: 100%;
     width: 100%;
     margin-bottom: 1em;
@@ -442,7 +442,6 @@ label {
 
 .form-section button {
   margin-top: 25px;
-
   text-transform: uppercase;
   font-weight: 700;
   font-size: 150%;
@@ -469,6 +468,7 @@ label {
   color: #eeeeee;
   box-shadow: 0 5px 20px #555555;
   transition: 0.1s;
+  /*zoom: 0.99;*/
 }
 
 
