@@ -1,0 +1,16 @@
+enabled: true
+from: monopoly.crimea@gmail.com
+from_name: 'Монополия Крым'
+to: monopoly.crimea@gmail.com
+mailer:
+  engine: smtp
+  smtp:
+    server: localhost
+    port: 25
+    encryption: none
+    user: monopoly.crimea@gmail.com
+    password: Monopolycrimea2017
+  sendmail:
+    bin: /usr/sbin/sendmail
+content_type: text/html
+debug: false

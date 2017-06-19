@@ -1,0 +1,11 @@
+email: monopoly.crimea@gmail.com
+fullname: Admin
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$sztTkme8vJcPpkn0AA3Oke1f5M4KfQr.tLSqkM9XMEG7wqlQqTKAu
