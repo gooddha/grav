@@ -27,6 +27,17 @@ var order = document.querySelector(".order-confirm");
 
 });
 
+$(window).scroll(function() {
+
+		var st = $(this).scrollTop();
+
+		$(".promo").css(
+			"background-position", "0 " + st/14 + "%"
+			// "transform" : "translate("
+		);
+
+});
+
 
 var body = document.body,
     timer;

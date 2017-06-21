@@ -351,7 +351,8 @@ label {
 
 .promo {
   background: url(../images/kry.jpg);
-  background-size: cover;
+  background-size: auto;
+  background-position: center ;
   padding: 30px;
 
 }
