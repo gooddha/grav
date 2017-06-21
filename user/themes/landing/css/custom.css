@@ -253,22 +253,42 @@ blockquote {
     transition: 0.2s;
 }
 
-.popup-ok {
-  position: absolute;
+.order-confirm {
+  /*position: absolute;*/
   /*display: inline-block;*/
   width: 60%;
-  height: 0vh;
-  bottom: 0vh;
+  /*height: 30vh;*/
+  /*bottom: 0vh;*/
   overflow: hidden;
-  left: 20%;
+  margin:0 auto;
+  /*left: 20%;*/
   /*border: 2px solid red;*/
   background-color: #ffffff;
   box-shadow: 0 2px 30px rgba(77, 77, 77, 0.64);
-  z-index: 0;
+  /*z-index: 0;*/
   /*transform: translateY(px);*/
+  letter-spacing: 0;
+  background: rgb(255, 249, 194);
+  /*padding-top: 50px;*/
+  margin-top: 50px;
+  border: 1px dashed black;
 }
 
-.popup-text {
+.order-confirm h2 {
+  text-align:  center;
+  font-size: 3em;
+}
+
+.order-confirm .wrapper {
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.order-confirm-text {
   text-align: center;
 }
 

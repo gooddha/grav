@@ -1,6 +1,12 @@
 $(document).ready(function() {
 
+//Плавный скрол на форму
 	$(".order-button").mPageScroll2id();
+
+
+//AJAX отправка формы
+var form = document.querySelector(".form-container");
+var order = document.querySelector(".order-confirm");
 
 	$("#order").submit(function() {
 		$.ajax({
@@ -9,13 +15,18 @@ $(document).ready(function() {
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
-			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-			$("#form").trigger("reset");
+			// console.log(this);
+			form.classList.add("hidden");
+			order.classList.remove("hidden");
+			// order.classList.add("show");
+			// alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+			// $("#order").trigger("reset");
 		});
 		return false;
 	});
 
 });
+
 
 var body = document.body,
     timer;
@@ -32,12 +43,12 @@ window.addEventListener('scroll', function() {
 }, false);
 
 
-var link = document.querySelector(".form-button");
-var popup = document.querySelector(".popup-ok");
 
-      link.addEventListener("submit", function(event) {
-				event.preventDefault();
 
-				popup.style.height="400px";
-
-      });
+			//
+      // link.addEventListener("submit", function(event) {
+			// 	event.preventDefault();
+			//
+			// 	popup.style.height="400px";
+			//
+      // });
