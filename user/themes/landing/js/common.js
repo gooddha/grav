@@ -7,8 +7,9 @@ $(document).ready(function() {
 //AJAX отправка формы
 var form = document.querySelector(".form-container");
 var order = document.querySelector(".order-confirm");
+var button = document.querySelector(".order-button");
 
-	$("#order").submit(function() {
+	$("#form").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
@@ -18,6 +19,7 @@ var order = document.querySelector(".order-confirm");
 			// console.log(this);
 			form.classList.add("hidden");
 			order.classList.remove("hidden");
+			button.href="#order";
 			// order.classList.add("show");
 			// alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
 			// $("#order").trigger("reset");
