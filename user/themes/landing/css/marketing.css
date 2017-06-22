@@ -318,7 +318,9 @@ label {
     text-transform: uppercase;
     letter-spacing: 0em;
     margin: 1em;
+    font-size: 2em;
 }
+
 
 .content p {
     font-size: 20px;
@@ -358,7 +360,7 @@ label {
 }
 
 .promo h3 {
-  font-size: 2em;
+  font-size: 1em;
 }
 
 
@@ -441,13 +443,16 @@ label {
   margin: 0.5em;
 }
 
+
+.form-section label {
+  display: block;
+}
+
 .form-section button {
   margin-top: 25px;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 150%;
   border-radius: 15px;
-  font-size: 250%;
   font-weight: 900;
   background-color: #02aa56;
   color: #ffffff;
@@ -500,6 +505,15 @@ label {
         background: white;
 
     }
+
+    .content-head {
+      font-size: 3em;
+    }
+
+    .promo h3 {
+      font-size: 2em;
+    }
+
 
     /* We can align the menu header to the left, but float the
     menu items to the right. */
