@@ -115,7 +115,16 @@ blockquote {
 
 .header a {
     color: #fff;
+    display: inline-block;
+    margin: 1em 0;
 }
+
+.head_logo {
+  transform: translate(0, 25%);
+}
+
+
+
 
 .header_title {
   display: none;
@@ -137,22 +146,27 @@ blockquote {
 
 .phone a,
 .social a {
+    display: inline-block;
     vertical-align: middle;
     transition: 0.5s;
     color: white;
-
+    margin: 1em 0;
 }
 
 .phone a, i {
+  display: inline-block;
   font-size: 1em;
   font-weight: 400;
 }
 
 .social a {
-  font-size: 1em;
-    margin: 0 10px;
+    font-size: 1em;
+    margin: 1em 1em;
 }
 
+.header .social a {
+  margin-right: 0;
+}
 
 
 .phone:hover,
@@ -235,8 +249,8 @@ blockquote {
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
-    height: 98vh;
-    top: 1em;
+    height: 95vh;
+    top: 2em;
     left: 0;
     position: fixed !important;
     animation: colorchange 30s infinite linear;
@@ -367,7 +381,7 @@ blockquote {
 
 .splash_button a {
     border-radius: 15px;
-    font-size: 250%;
+    font-size: 150%;
     font-weight: 900;
     background-color: #02aa56;
     color: #ffffff;
@@ -430,9 +444,13 @@ blockquote {
 }
 
 
+.content_item {
+  padding: 0 0.5em;
+}
+
 .content p {
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 13px;
     font-family: "PT Sans", sans-serif;
 }
 
@@ -487,14 +505,17 @@ blockquote {
 
 .complectation_wrapper h2 {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   color: #ffffff;
 }
 
 
+.complectation_item {
+  padding-bottom: 1em;
+}
+
 .complectation_item .image {
-  /*border-radius: 50%;*/
-  /*overflow: hidden;*/
+  padding-bottom: 0;
 }
 
 
@@ -560,7 +581,7 @@ blockquote {
   background-color: #02aa56;
   color: #ffffff;
   transition: 0.1s;
-  box-shadow: 0 15px 40px #555555;
+  box-shadow: 0 6px 10px #555555;
   opacity: 0.9;
 }
 
@@ -568,14 +589,13 @@ blockquote {
     background-color: #02aa56;
     color: #ffffff;
     transition: 0.1s;
-    box-shadow: 0 15px 40px #555555;
     opacity: 1;
 }
 
 .form-section button:active {
   background-color: #05914b;
   color: #eeeeee;
-  box-shadow: 0 5px 20px #555555;
+  box-shadow: 0 2px 5px #555555;
   transition: 0.1s;
   /*zoom: 0.99;*/
 }
@@ -654,8 +674,8 @@ blockquote {
 
 .footer p {
   font-family: "PT Sans", sans-serif;
-  font-size: 1.2em;
-  font-weight: bold;
+  /*font-size: 1em;
+  font-weight: bold;*/
 }
 
 
@@ -664,10 +684,34 @@ blockquote {
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */
-@media (min-width: 20em) {
 
-  .logo-wrapper {
+
+@media (min-width: 21em) {
+
+
+   .content p {
+     font-size: 1em;
+     line-height: 15px;
+   }
+}
+
+@media (min-width: 30em) {
+
+  .logo_wrapper {
     width: 50%;
+  }
+
+  .header_title {
+    display: inline-block;
+  }
+
+  .splash_button a  {
+    font-size: 250%;
+  }
+
+  .content p {
+    font-size: 1.5em;
+    line-height: 1em;
   }
 
 }
@@ -684,6 +728,8 @@ blockquote {
       width: 50%;
     }
 
+
+
     .content-wrapper {
         /* These styles are required for the "scroll-over" effect */
         position: absolute;
@@ -697,6 +743,8 @@ blockquote {
     .wrapper {
         margin: 0 3rem;
     }
+
+
 
     .content-head {
       font-size: 3em;
@@ -719,7 +767,7 @@ blockquote {
     /* We increase the height of the splash-container */
     .splash-container {
         height: 95vh;
-        top: 1em;
+        top: 2em;
     }
 
     /* We decrease the width of the .splash, since we have more width
@@ -751,4 +799,13 @@ blockquote {
     .splash-head {
         font-size: 300%;
     }
+
+    .logo_wrapper {
+      top: 50%;
+    }
+
+    .splash_button {
+    top: 85vh;
+
+}
 }
