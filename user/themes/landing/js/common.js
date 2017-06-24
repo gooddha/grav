@@ -9,7 +9,7 @@ var form = document.querySelector(".form-container");
 var order = document.querySelector(".order-confirm");
 var button = document.querySelector(".order-button");
 
-	$("#form").submit(function() {
+	$(".pure-form").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",

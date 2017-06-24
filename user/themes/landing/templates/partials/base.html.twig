@@ -20,8 +20,7 @@
         {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css', 100) %}
         {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 99) %}
         {% do assets.addCss('https://fonts.googleapis.com/css?family=Arsenal:400,700&amp;subset=cyrillic', 99) %}
-        {% do assets.addCss('theme://css/marketing.css', 98) %}
-        {% do assets.addCss('theme://css/custom.css', 98) %}
+        {% do assets.addCss('theme://css/style.css', 98) %}
 
     {% endblock %}
     {{ assets.css() }}
@@ -38,10 +37,10 @@
 {% block header %}
     <div class="header">
         <div class="wrapper padding">
-            <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
-                <img width=75 src="user/themes/landing/images/small_logo.png" alt="Лого"></img>
-                {{ config.site.title }}
+            <a class="" href="{{ base_url == '' ? '/' : base_url }}">
+                <img width=50 src="user/themes/landing/images/logo.svg" alt="Лого"></img>
             </a>
+            <p class="header_title">{{ config.site.title }}</p>
 
             <div class="contacts right">
                 <div class="phone left">
