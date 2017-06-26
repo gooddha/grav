@@ -1,5 +1,4 @@
 ---
-title: Монополия Крым
 
 content:
     items: @self.modular

@@ -8,8 +8,8 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Landing page for the Monopoly Crimea game ">
-    {% include 'partials/metadata.html.twig' %}
+    <meta name="description" content="Настольная игра Монополия Крым">
+    <meta name="keywords" content="Настольная игра Монополия Крым">
 
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
@@ -38,9 +38,9 @@
     <div class="header">
         <div class="wrapper padding">
             <a class="head_logo" href="{{ base_url == '' ? '/' : base_url }}">
-                <img width=50 src="user/themes/landing/images/logo.svg" alt="Лого"></img>
+                <img width=50 src="user/themes/landing/images/logo.svg" alt="Лого">
+                <p class="header_title">{{ config.site.title }}</p>
             </a>
-            <p class="header_title">{{ config.site.title }}</p>
 
             <div class="contacts right">
                 <div class="phone left">

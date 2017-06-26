@@ -115,7 +115,7 @@ blockquote {
 
 .header a {
     color: #fff;
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 1em 0;
 }
 
@@ -216,26 +216,6 @@ blockquote {
 
 
 /*
- * -- PURE FORM STYLES --
- * Style the form inputs and labels
- */
-.pure-form label {
-    margin: 1em 0 0;
-    font-weight: bold;
-    font-size: 100%;
-}
-
-.pure-form input[type] {
-    border: 1px solid #ddd;
-    box-shadow: inset 0 0 5px #818181;
-    font-size: 100%;
-    width: 100%;
-    margin-bottom: 1em;
-}
-
-
-
-/*
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
@@ -243,16 +223,10 @@ blockquote {
 .splash-container {
     display: block;
     background: #393185;
-    z-index: -1;
-    background-size: cover;
-    background-position: 50% 50%;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
-    height: 95vh;
-    top: 2em;
-    left: 0;
-    position: fixed !important;
+    height: 100vh;
     animation: colorchange 30s infinite linear;
 }
 
@@ -289,7 +263,7 @@ blockquote {
 
 .made_in_crimea {
     position: absolute;
-    top: 5%;
+    top: 12%;
     right: 15px;
     width: 20%;
     filter: drop-shadow(5px 5px 10px #333333);
@@ -301,7 +275,7 @@ blockquote {
     max-width: 700px;
     width: 80%;
     height: 50%;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -372,7 +346,7 @@ blockquote {
 
 .splash_button {
     position: absolute;
-    top: 75vh;
+    top: 80vh;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -380,30 +354,29 @@ blockquote {
 }
 
 .splash_button a {
+    font-family: "PT Sans", sans-serif;
     border-radius: 15px;
     font-size: 150%;
     font-weight: 900;
     background-color: #02aa56;
     color: #ffffff;
     transition: 0.1s;
-    box-shadow: 0 15px 40px #555555;
+    box-shadow: 0 6px 10px #555555;
     opacity: 0.9;
 }
 
 .splash_button:hover a{
-    /*font-size: 280%;*/
     background-color: #02aa56;
     color: #ffffff;
     transition: 0.1s;
-    box-shadow: 0 15px 40px #555555;
     opacity: 1;
 }
 
 .splash_button:active a{
-    font-size: 240%;
+    font-size: 140%;
     background-color: #05914b;
     color: #eeeeee;
-    box-shadow: 0 5px 20px #555555;
+    box-shadow: 0 3px 7px #555555;
     transition: 0.1s;
 }
 
@@ -543,6 +516,7 @@ blockquote {
 }
 
 .complectation_item .description p {
+  font-family: "PT Sans", sans-serif;
   color: #ffffff;
   text-align: center;
 }
@@ -554,6 +528,10 @@ blockquote {
     color: #aaa;
 }
 
+.call-form {
+  font-size: 1.6em;
+}
+
 
 .form-section {
   margin-bottom: 5em;
@@ -562,14 +540,22 @@ blockquote {
   color: red;
 }
 
+.form-section h2 {
+  font-size: 2em;
+}
+
 .form-section h2,
 .form-section h4 {
   margin: 0.5em;
+  line-height: 1em;
 }
 
 
 .form-section label {
   display: block;
+  margin: 0 auto;
+  width: 80%
+
 }
 
 .form-section button {
@@ -616,22 +602,44 @@ blockquote {
     margin: 0 auto;
 }
 
+/*
+ * -- PURE FORM STYLES --
+ * Style the form inputs and labels
+ */
+.pure-form label {
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.pure-form input[type="text"] {
+    display: block;
+    font-family: "PT Sans", sans-serif;
+    border: 1px solid #ddd;
+    /*box-shadow: inset 0 0 5px #818181;*/
+    font-size: 100%;
+    width:80%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+
+}
+
+
+
 .form-container {
     padding: 0;
 }
 
 .pure-form button {
-    width: 100%;
-}
-
-
-.call-form {
-    font-size: 2em;
+    display: block;
+    font-family: "PT Sans", sans-serif;
+    width: 80%;
+    margin: 0 auto !important;
 }
 
 .order-confirm {
   /*position: absolute;*/
   /*display: inline-block;*/
+  max-width: 500px;
   width: 60%;
   /*height: 30vh;*/
   /*bottom: 0vh;*/
@@ -663,6 +671,7 @@ blockquote {
 
 /* This is the class used for the footer */
 .footer {
+    font-family: "PT Sans", sans-serif !important;
     background-color: rgb(66, 66, 66);
     position: relative;
     bottom: 0;
@@ -670,12 +679,13 @@ blockquote {
     color: white;
     box-shadow: 0 2px 30px rgba(77, 77, 77, 0.64);
     z-index: 1;
+
+
 }
 
 .footer p {
   font-family: "PT Sans", sans-serif;
-  /*font-size: 1em;
-  font-weight: bold;*/
+  /*margin: 0;  */
 }
 
 
@@ -709,10 +719,21 @@ blockquote {
     font-size: 250%;
   }
 
+  .splash_button a:active  {
+    font-size: 240%;
+  }
+
   .content p {
     font-size: 1.5em;
     line-height: 1em;
   }
+
+  .form-section h2, .form-section h4 {
+    font-size: 2em;
+    margin: 1em;
+    line-height: 2em;
+    margin-bottom: 0;
+}
 
 }
 
@@ -766,8 +787,8 @@ blockquote {
 
     /* We increase the height of the splash-container */
     .splash-container {
-        height: 95vh;
-        top: 2em;
+        /*height: 95vh;
+        top: 2em;*/
     }
 
     /* We decrease the width of the .splash, since we have more width

@@ -29,6 +29,9 @@ var button = document.querySelector(".order-button");
 
 });
 
+
+
+//parallax scroll
 $(window).scroll(function() {
 
 		var st = $(this).scrollTop();
@@ -40,7 +43,7 @@ $(window).scroll(function() {
 
 });
 
-
+//hover effect disable while scroll
 var body = document.body,
     timer;
 
@@ -54,14 +57,3 @@ window.addEventListener('scroll', function() {
     body.classList.remove('disable-hover')
   },500);
 }, false);
-
-
-
-
-			//
-      // link.addEventListener("submit", function(event) {
-			// 	event.preventDefault();
-			//
-			// 	popup.style.height="400px";
-			//
-      // });
