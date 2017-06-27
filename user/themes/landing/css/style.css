@@ -115,12 +115,12 @@ blockquote {
 
 .header a {
     color: #fff;
-    /*display: inline-block;*/
+    display: inline-block;
     margin: 1em 0;
 }
 
 .head_logo {
-  transform: translate(0, 25%);
+  /*transform: translate(0, 25%);*/
 }
 
 
@@ -128,6 +128,7 @@ blockquote {
 
 .header_title {
   display: none;
+  margin: 0;
 }
 
 .header .logo {
@@ -271,20 +272,28 @@ blockquote {
 
 
 .logo_wrapper {
-    position: absolute;
-    max-width: 700px;
-    width: 80%;
-    height: 50%;
-    top: 45%;
+    margin: 0 auto;
+    padding-top: 3em;
+    /*position: absolute;
+    max-width: 1000px;*/
+    width: 100%;
+    height: 90%;
+    /*top: 63%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 
 .logo_container {
-    position: relative;
-    margin: 0 auto;
     height: 100%;
     width: 100%;
+    background: url(../images/logomc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: drop-shadow(0px 0px 10px #333333);
+    /*position: relative;
+    margin: 0 auto;*/
+
     /*outline: 1px solid black;*/
 }
 
@@ -299,10 +308,10 @@ blockquote {
 }
 
 .big_logo {
-    position: absolute;
+    /*position: absolute;
     bottom: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     max-width: 100%;
     filter: drop-shadow(0px 0px 10px #333333);
 }
@@ -346,11 +355,10 @@ blockquote {
 
 .splash_button {
     position: absolute;
-    top: 80vh;
+    top: 83vh;
     left: 50%;
     transform: translate(-50%, -50%);
-
-
+    margin: 0;
 }
 
 .splash_button a {
@@ -708,16 +716,14 @@ blockquote {
 @media (min-width: 30em) {
 
   .logo_wrapper {
-    width: 50%;
+    /*width: 80%;*/
   }
 
   .header_title {
     display: inline-block;
   }
 
-  .splash_button a  {
-    font-size: 250%;
-  }
+
 
   .splash_button a:active  {
     font-size: 240%;
@@ -749,6 +755,10 @@ blockquote {
       width: 50%;
     }
 
+    .splash_button a  {
+      font-size: 250%;
+    }
+
 
 
     .content-wrapper {
@@ -757,7 +767,7 @@ blockquote {
         top: 100vh;
         width: 100%;
         min-height: 12%;
-        z-index: 2;
+        /*z-index: 2;*/
         background: white;
     }
 
