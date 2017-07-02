@@ -3,78 +3,16 @@
   <h2>В комплекте с игрой идут:</h2>
 
     <ul class="pure-g complectation_items">
+      {% for item in page.header.items %}
       <li class="pure-u-1 pure-u-md-1-3 complectation_item">
         <div class="complectation_item image">
-          <img src="user/themes/landing/images/field.jpg" alt="">
+            <img src="{{ page.media[item.image].url }}" alt="">
         </div>
         <div class="complectation_item description">
-          <p>Игровое поле</p>
+          <p>{{ item.title }}</p>
         </div>
       </li>
-      <li class="pure-u-1 pure-u-md-1-3 complectation_item">
-        <div class="complectation_item image">
-          <img src="user/themes/landing/images/fishka.jpg" alt="">
-        </div>
-        <div class="complectation_item description">
-          <p>8 фишек</p>
-        </div>
-      </li>
-      <li class="pure-u-1 pure-u-md-1-3 complectation_item">
-        <div class="complectation_item image">
-          <img src="user/themes/landing/images/dice.jpg" alt="">
-        </div>
-        <div class="complectation_item description">
-          <p>2 игровых кубика</p>
-        </div>
-      </li>
-      <li class="pure-u-1 pure-u-md-1-3 complectation_item">
-        <div class="complectation_item image">
-          <img src="user/themes/landing/images/kazna.jpg" alt="">
-        </div>
-        <div class="complectation_item description">
-          <p>16 карточек "Общественная казна"</p>
-        </div>
-      </li>
-      <li class="pure-u-1 pure-u-md-1-3 complectation_item">
-        <div class="complectation_item image">
-          <img src="user/themes/landing/images/chance.jpg" alt="">
-        </div>
-        <div class="complectation_item description">
-          <p>16 карточек "Шанс"</p>
-        </div>
-      </li>
-      <li class="pure-u-1 pure-u-md-1-3 complectation_item">
-        <div class="complectation_item image">
-          <img src="user/themes/landing/images/owner.jpg" alt="">
-        </div>
-        <div class="complectation_item description">
-          <p>28 каточек собственника</p>
-        </div>
-      </li>
-      <li class="pure-u-1 pure-u-md-1-3 complectation_item">
-        <div class="complectation_item image">
-          <img src="user/themes/landing/images/home.jpg" alt="">
-        </div>
-        <div class="complectation_item description">
-          <p>32 дома</p>
-        </div>
-      </li>
-      <li class="pure-u-1 pure-u-md-1-3 complectation_item">
-        <div class="complectation_item image">
-          <img src="user/themes/landing/images/hotel.jpg" alt="">
-        </div>
-        <div class="complectation_item description">
-          <p>12 отелей</p>
-        </div>
-      </li>
-      <li class="pure-u-1 pure-u-md-1-3 complectation_item">
-        <div class="complectation_item image">
-          <img src="user/themes/landing/images/field.jpg" alt="">
-        </div>
-        <div class="complectation_item description">
-          <p>Пачка денег и инструкция</p>
-        </div>
-      </li>
+      {% endfor %}
     </ul>
 
 </div>

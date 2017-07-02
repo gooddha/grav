@@ -1,42 +1,16 @@
 <div class="content">
-    <h2 class="content-head is-center">Представляем Вам нашу версию давно известной многим классической игры <strong>«Монополия»</strong></h2>
+    <h2 class="content-head is-center">Представляем Вам нашу версию давно известной всем классической настольной игры <strong>«Монополия»</strong></h2>
 
     <div class="pure-g">
+      {% for item in page.header.items %}
         <div class="content_item l-box pure-u-1-2 pure-u-lg-1-4">
 
             <h3 class="content-subhead">
-                <i class="fa fa-building-o"></i>
+                <i class="{{ item.icon }}"></i>
             </h3>
-            <p>
-                «Монополия Крым» позволит Вам познакомиться с основными городами — жемчужинами Крыма и <i>стать их владельцем</i>!
-            </p>
+            <p>{{ item.text }}</p>
+
         </div>
-        <div class="content_item l-box pure-u-1-2 pure-u-lg-1-4">
-            <h3 class="content-subhead">
-                <i class="fa fa-map-signs"></i>
-            </h3>
-            <p>
-                Отправляйтесь в <i>увлекательное путешествие</i> по полуострову, познакомьтесь с неповторимым и разнообразным по культуре и традициям Крымом!
-            </p>
-        </div>
-        <div class="content_item l-box pure-u-1-2 pure-u-lg-1-4">
-            <h3 class="content-subhead">
-                <i class="fa fa-image"></i>
-            </h3>
-            <p>
-                Здесь и памятники военных событий, и разнообразная архитектура, и красивые пейзажи, и, конечно же, море и горы!
-            </p>
-        </div>
-        <div class="content_item l-box pure-u-1-2 pure-u-lg-1-4">
-            <h3 class="content-subhead">
-                <i class="fa fa-home"></i>
-            </h3>
-            <p>
-                Всё это <i>у вас дома</i>! Получайте море впечатлений и эмоций, зарабатывайте миллионы, становитесь настоящим «Крымским Монополистом»!
-            </p>
-        </div>
+      {% endfor %}
     </div>
 </div>
-
-
-<!-- Надо сделать шаблонизацию и перенос контента в markdown-->

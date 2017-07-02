@@ -10,6 +10,6 @@ content:
             - _slider
             - _promotext
             - _complectation
-            - _form            
-            - _footer            
+            - _form
+            - _footer
 ---

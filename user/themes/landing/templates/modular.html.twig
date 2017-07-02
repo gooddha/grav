@@ -1,49 +1,15 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
-{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
-
-{% block javascripts %}
-    {% if show_onpage_menu %}
-        {% do assets.add('theme://js/singlePageNav.min.js') %}
-    {% endif %}
-    {{ parent() }}
-{% endblock %}
-
-{% block header_navigation %}
-    {% if show_onpage_menu %}
-        <ul class="navigation">
-        {% for module in page.collection() %}
-            {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
-            <li class="{{ current_module }}"><a href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
-        {% endfor %}
-        {% for mitem in site.menu %}
-            <li>
-                <a {% if mitem.class %}class="{{ mitem.class }}"{% endif %} href="{{ mitem.url }}">
-                    {% if mitem.icon %}<i class="fa fa-{{ mitem.icon }}"></i>{% endif %}
-                    {{ mitem.text }}
-                </a>
-            </li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        {{  parent() }}
-    {% endif %}
-{% endblock %}
-
 {% block splash %}
   <div class="pure-g splash-container">
     <div class="pure-u-1 splash">
-        <img class="strip" src="user/themes/landing/images/strip.svg" alt="Лента флаг Крыма">
-        <img class="made_in_crimea" src="user/themes/landing/images/made_in_crimea.png" alt="Сделано в Крыму">
+        <img class="strip" src="{{ url('theme://images/strip.svg') }}" alt="Лента флаг Крыма">
+        <img class="made_in_crimea" src="{{ url('theme://images/made_in_crimea.png') }}" alt="Сделано в Крыму">
         <div class="logo_wrapper">
             <div class="logo_container">
-                <!-- <img class="sights" alt="Достопримечательности" src="user/themes/landing/images/sights.png"> -->
-                <!-- <img class="big_logo" alt="Монополия Крым" src="user/themes/landing/images/logomc.png"> -->
-                <!-- <img class="dice" alt="Игральные кости" src="user/themes/landing/images/dice.png"> -->
             </div>
         </div>
-        <img class="age_players" src="user/themes/landing/images/age-players.svg" alt="Возраст: от 8 лет, количество игроков: 2-6">
+        <img class="age_players" src="{{ url('theme://images/age-players.svg') }}" alt="Возраст: от 8 лет, количество игроков: 2-6">
         <p class="splash_button">
             <a href="#form-section" class="pure-button pure-button-primary order-button">Заказать</a>
         </p>

@@ -38,7 +38,7 @@
     <div class="header">
         <div class="wrapper padding">
             <a class="head_logo" href="{{ base_url == '' ? '/' : base_url }}">
-                <img width=50 src="user/themes/landing/images/logo.svg" alt="Лого">
+                <img width=50 src="{{ url('theme://images/logo.svg') }}" alt="Лого">
                 <p class="header_title">{{ config.site.title }}</p>
             </a>
 
