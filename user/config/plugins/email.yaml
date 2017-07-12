@@ -5,11 +5,11 @@ to: monopoly.crimea@gmail.com
 mailer:
   engine: smtp
   smtp:
-    server: localhost
-    port: 25
-    encryption: none
+    server: smtp.gmail.com
+    port: 465
+    encryption: ssl
     user: monopoly.crimea@gmail.com
-    password: Monopolycrimea2017
+    password: monopoly2017
   sendmail:
     bin: /usr/sbin/sendmail
 content_type: text/html
