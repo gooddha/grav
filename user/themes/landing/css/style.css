@@ -619,7 +619,9 @@ blockquote {
     font-size: 100%;
 }
 
-.pure-form input[type="text"] {
+.pure-form input[type="text"],
+.pure-form input[type="tel"]
+{
     display: block;
     font-family: "PT Sans", sans-serif;
     border: 1px solid #ddd;
