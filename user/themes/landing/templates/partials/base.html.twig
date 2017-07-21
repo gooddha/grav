@@ -48,10 +48,10 @@
                     <a href="tel:{{ site.author.phone }}"><i class="fa fa-phone-square" aria-hidden="true"></i> {{ site.author.phone }}</a>
                 </div>
                 <div class="social right">
-                    <a href="https://vk.com/monopoly.crimea">
+                    <a href="{{ site.social.vk }}">
                         <i class="fa fa-vk" aria-hidden="true"></i>
                     </a>
-                    <a href="https://instagram.com">
+                    <a href="{{ site.social.ig }}">
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -75,8 +75,8 @@
 {% block bottom %}
     {{ assets.js('bottom') }}
 {% endblock %}
-<script src="user/themes/landing/js/jquery.malihu.PageScroll2id.min.js"></script>
-<script src="user/themes/landing/js/common.js"></script>
+<script src="{{ url('theme://js/jquery.malihu.PageScroll2id.min.js') }}"></script>
+<script src="{{ url('theme://js/common.js') }}"></script>
 
 </body>
 </html>
