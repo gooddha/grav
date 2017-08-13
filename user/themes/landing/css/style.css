@@ -463,11 +463,18 @@ blockquote {
   background-size: auto;
   background-position: center ;
   padding: 30px;
+  text-align: center;
 
 }
 
 .promo h3 {
   font-size: 1em;
+}
+
+.promo i {
+  font-size: 200px;
+  text-align: center;
+  color: #005903;
 }
 
 
@@ -538,6 +545,7 @@ blockquote {
 
 .call-form {
   font-size: 1.6em;
+  margin-top: 0;
 }
 
 
@@ -554,7 +562,7 @@ blockquote {
 
 .form-section h2,
 .form-section h4 {
-  margin: 0.5em;
+  /*margin: 0.5em;*/
   line-height: 1em;
 }
 
@@ -738,7 +746,7 @@ blockquote {
 
   .form-section h2, .form-section h4 {
     font-size: 2em;
-    margin: 1em;
+    /*margin: 1em;*/
     line-height: 2em;
     margin-bottom: 0;
 }

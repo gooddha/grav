@@ -37,7 +37,7 @@ $(window).scroll(function() {
 		var st = $(this).scrollTop();
 
 		$(".promo").css(
-			"background-position", "0 " + st/14 + "%"
+			"background-position", "25 " + st/27 + "%"
 			// "transform" : "translate("
 		);
 

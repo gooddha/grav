@@ -1,23 +1,21 @@
 <?php
 
 //
-// $from = 'monopoly.crimea@gmail.com';
-
-//
-//mail($to, $title, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
-//
-//
-// $message = $this->grav['Email']->message($title, $message, 'text/html')
-//     ->setFrom($from)
-//     ->setTo($to);
-//
-// $sent = $this->grav['Email']->send($message);
+$from = 'monopoly.crimea@gmail.com';
 
 $mail_to = "monopoly.crimea@gmail.com";
 $subject = "Новая заявка с сайта \"Монополия Крым\"";
 $name = trim($_POST["name"]);
 $phone = trim($_POST["phone"]);
 $message = "Был оформлен заказ. \nИмя: $name \nТелефон: $phone";
+//
+mail($mail_to, $subject, $message, "Content-type: text/plain; charset=\"utf-8\"\nFrom: $from");
+//
+// $message = $this->grav['Email']->message($title, $message, 'text/html')
+//     ->setFrom($from)
+//     ->setTo($to);
+//
+// $sent = $this->grav['Email']->send($message);
 
 //$config['smtp_username'] = 'monopoly.crimea@gmail.com';  //Смените на адрес своего почтового ящика.
 //$config['smtp_port'] = '465'; // Порт работы.
@@ -35,16 +33,15 @@ $message = "Был оформлен заказ. \nИмя: $name \nТелефон
 //$config['smtp_charset'] = 'utf-8';	//кодировка сообщений. (windows-1251 или utf-8, итд)
 //$config['smtp_from'] = 'Монополия Крым'; //Ваше имя - или имя Вашего сайта. Будет показывать при прочтении в поле "От кого"
 
-$config['smtp_username'] = 'adamovich@evtp.ru';  //Смените на адрес своего почтового ящика.
-$config['smtp_port'] = '465'; // Порт работы.
-$config['smtp_host'] =  'ssl://smtp.mail.ru';  //сервер для отправки почты
-$config['smtp_password'] = 'Gooddha1!';  //Измените пароль
+$config['smtp_username'] = 'mail@monopoly-crimea.ru';  //Смените на адрес своего почтового ящика.
+$config['smtp_port'] = '25'; // Порт работы.
+$config['smtp_host'] =  'mail.monopoly-crimea.ru';  //сервер для отправки почты
+$config['smtp_password'] = 'mailmonopoly2017';  //Измените пароль
 $config['smtp_debug'] = true;  //Если Вы хотите видеть сообщения ошибок, укажите true вместо false
 $config['smtp_charset'] = 'utf-8';	//кодировка сообщений. (windows-1251 или utf-8, итд)
 $config['smtp_from'] = 'Монополия Крым'; //Ваше имя - или имя Вашего сайта. Будет показывать при прочтении в поле "От кого"
 
-smtpmail('monopoly.crimea@gmail.com', $mail_to, $subject, $message);
-//smtpmail($to='monopoly.crimea@gmail.com', $mail_to, $subject, $message);
+// smtpmail('monopoly.crimea@gmail.com', $mail_to, $subject, $message);
 
 function smtpmail($to='', $mail_to, $subject, $message, $headers='') {
 	global $config;
